@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathGuide - Mvula D.K</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="MathGuide by Mvula D.K offers comprehensive study guides, past exam papers, videos, pamphlets, and more to enhance learning and teaching experiences.">
+    <meta name="keywords" content="MathGuide, Education, Study Guides, Exam Papers, Learning, Teaching">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #2980B9, #6DD5FA);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            color: #333;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-links div {
+            margin: 0 10px;
+            text-align: center;
+            color: inherit;
+        }
+        h1, h2 {
+            background: #2980B9;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        blockquote {
+            font-style: italic;
+            opacity: 0.9;
+            border-left: 4px solid #2980B9;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            color: #020202;
+            text-align: left;
+        }
+        .updates {
+            background: #f7f7f7;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: #333;
+            text-align: left;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            height: 90vh;
+        }
+        .pdf-list {
+            width: 200px;
+            height: 100%;
+            max-height: 100%;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+            padding: 10px;
+        }
+        .pdf-list a {
+            display: block;
+            padding: 8px;
+            color: #2980B9;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .pdf-list a:hover {
+            text-decoration: underline;
+        }
+        .pdf-container {
+            flex-grow: 1;
+            height: 100%;
+            width: calc(100% - 200px);
+            overflow: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .loading {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: #050505;
+        }
+    </style>
+    <!-- AdSense Script -->
+    <script data-ad-client="ca-pub-XXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <div class="content-wrapper p-8 bg-white rounded-lg shadow-lg max-w-4xl w-full">
+        <div>
+            <h1 class="text-4xl font-bold mb-4 bg-blue-500 text-white p-4 rounded">MATHGUIDE</h1>
+            <h2 class="text-2xl font-light mb-6 bg-blue-200 text-black p-4 rounded">Education the Best Ways</h2>
+            <p class="mb-6 text-lg">Access comprehensive Study Guides, ECZ Past Exam Papers|Answers, Detailed Videos, Pamphlets, Books and more all tailored to enhance your learning/teaching experience. Stay ahead of the curve and achieve academic excellence with MathGuide.</p>
+            <div class="social-links">
+                <div>
+                    <a href="https://www.facebook.com/Mvuladk?mibextid=ZbWKl" target="_blank" aria-label="Follow on Facebook">
+                        <i class="fab fa-facebook-f text-blue-600 text-2xl"></i>
+                    </a>
+                    <p>Follow</p>
+                </div>
+                <div>
+                    <a href="https://wa.me/+260975339212" target="_blank" aria-label="Contact on WhatsApp">
+                        <i class="fab fa-whatsapp text-green-600 text-2xl"></i>
+                    </a>
+                    <p>WhatsApp</p>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/@mvuladk-mathguide-eczpapers?si=JLiGSiLm_bnhSMrx" target="_blank" aria-label="Subscribe on YouTube">
+                        <i class="fab fa-youtube text-red-600 text-2xl"></i>
+                    </a>
+                    <p>Subscribe</p>
+                </div>
+            </div>
+            <blockquote class="italic border-l-4 border-blue-800 pl-4 mb-6 bg-gray-200 text-gray-700 p-4 rounded">
+                "The only way to learn is to do..." - David K Mvula
+            </blockquote>
+            <div class="adsense-ad mb-6">
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-XXXXXX"
+                    data-ad-slot="YYYYYY"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <button class="access-button bg-blue-700 text-white px-8 py-4 rounded-full text-lg hover:bg-blue-800 transition-transform transform hover:-translate-y-1" onclick="document.getElementById('myModal').style.display='block'">Study Materials</button>
+            <div class="flex justify-center mt-6">
+                <a href="https://play.google.com/store/apps/details?id=com.ecz.pastpapersG12" target="_blank" class="flex items-center bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-transform transform hover:-translate-y-1" aria-label="Install App on Google Play">
+                    <i class="fab fa-google-play text-2xl mr-2"></i>
+                    <span class="text-lg">Install App</span>
+                </a>
+            </div>
+        </div>
+        <div class="updates">
+            <h2 class="text-xl font-bold mb-4">Updates</h2>
+            <p>Welcome to MathGuide - Mvula D.K. Stay tuned for regular updates and new study materials.</p>
+            <p>Update 1: New study materials added up to 2023.</p>
+            <p>Update 2: MAthGuide App is alailable on the Google Play Store.</p>
+        </div>
+    </div>
+    
+    <div id="myModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('myModal').style.display='none'" role="button" aria-label="Close">&times;</span>
+            <div id="pdfList" class="pdf-list" role="navigation" aria-label="PDF List"></div>
+            <div class="pdf-container">
+                <iframe id="pdfFrame" src="about:blank" title="PDF Viewer"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="loading">Loading...</div>
+
+    <script>
+        function loadPDF(url) {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            document.getElementById('pdfFrame').src = url;
+            document.getElementById('pdfFrame').onload = () => loading.style.display = 'none';
+        }
+
+        const pdfFiles = [
+            {name: "Math 2009 1", url: "https://drive.google.com/file/d/1aWd_Gi7_SdotyPO3D2ZNt7XAJHEFKYjE/preview"},
+            {name: "Math 2009 2", url: "https://drive.google.com/file/d/1aWd_Gi7_SdotyPO3D2ZNt7XAJHEFKYjE/preview"},
+            {name: "Math 2009 3", url: "https://drive.google.com/file/d/1aWd_Gi7_SdotyPO3D2ZNt7XAJHEFKYjE/preview"}
+        ];
+
+        pdfFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+        const pdfListContainer = document.getElementById('pdfList');
+        
+        pdfFiles.forEach(file => {
+            const link = document.createElement('a');
+            link.href = "#";
+            link.textContent = file.name;
+            link.onclick = function() { loadPDF(file.url); };
+            pdfListContainer.appendChild(link);
+        });
+        
+        const modal = document.getElementById('myModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
